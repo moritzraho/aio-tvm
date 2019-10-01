@@ -33,6 +33,7 @@
     "beautify": "npm run lint -- --fix",
     "deploy": "webpack && cna-scripts deploy.actions",
     "undeploy": "cna-scripts undeploy.actions",
+    "gen-swagger-doc": "aio runtime api get /tvm > docs/swagger.json",
     "test": "jest -c ./jest.config.js && npm run lint"
   },
   "dependencies": {
