@@ -25,6 +25,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "fs-extra": "^8.1.0",
     "jest": "^24.9.0",
+    "swagger-markdown": "^1.2.0",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   },
@@ -33,7 +34,7 @@
     "beautify": "npm run lint -- --fix",
     "deploy": "webpack && cna-scripts deploy.actions",
     "undeploy": "cna-scripts undeploy.actions",
-    "gen-swagger-doc": "aio runtime api get /tvm > docs/swagger.json",
+    "gen-swagger-doc": "aio runtime api get /tvm > docs/swagger.json && swagger-markdown -i docs/swagger.json -o docs/api.md",
     "test": "jest -c ./jest.config.js && npm run lint"
   },
   "dependencies": {
